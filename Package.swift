@@ -5,9 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "Entities",
+    products: [
+        .library(name: "Entities", targets: ["Entities"])
+    ],
     dependencies: [],
     targets: [
-        .executableTarget(name: "Entities", dependencies: []),
+        .target(name: "Entities", dependencies: []),
         .testTarget(name: "EntitiesTests", dependencies: ["Entities"]),
     ]
 )
