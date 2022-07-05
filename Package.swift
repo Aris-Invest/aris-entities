@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Entities",
+    name: "aris-entities",
     products: [
         .library(name: "Entities", targets: ["Entities"])
     ],
