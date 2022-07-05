@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Stock {
+public struct Stock: Codable {
     public let longName: String
     public let shortName: String
     public let symbol: String

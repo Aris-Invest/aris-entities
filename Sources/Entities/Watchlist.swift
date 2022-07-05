@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Watchlist {
+public struct Watchlist: Codable {
     public let items: [WatchlistItem]
     
     public init(items: [WatchlistItem]) {
@@ -8,7 +8,7 @@ public struct Watchlist {
     }
 }
 
-public struct WatchlistItem {
+public struct WatchlistItem: Codable {
     public let ticker: String
     
     public init(ticker: String) {
