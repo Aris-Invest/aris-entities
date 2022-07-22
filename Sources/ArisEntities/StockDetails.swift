@@ -3,12 +3,12 @@ import Foundation
 public struct StockDetails: Codable {
     public let data: [HistoricalData]
     public let ticker: String
-    public let company: String
+    public let company: CompanyInfo
     
     public init(
         data: [HistoricalData],
         ticker: String,
-        company: String
+        company: CompanyInfo
     ) {
         self.data = data
         self.ticker = ticker
