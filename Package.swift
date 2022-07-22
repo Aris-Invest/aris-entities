@@ -6,11 +6,10 @@ import PackageDescription
 let package = Package(
     name: "aris-entities",
     products: [
-        .library(name: "Entities", targets: ["Entities"])
+        .library(name: "ArisEntities", targets: ["ArisEntities"])
     ],
     dependencies: [],
     targets: [
-        .target(name: "Entities", dependencies: []),
-        .testTarget(name: "EntitiesTests", dependencies: ["Entities"]),
+        .target(name: "ArisEntities", dependencies: [])
     ]
 )
