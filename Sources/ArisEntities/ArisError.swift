@@ -14,6 +14,9 @@ public protocol ArisErrorProtocol: Error {
 }
 
 public struct ArisError: ArisErrorProtocol {
+    public init(type: ArisErrorType) {
+        self.type = type
+    }
     
     public let type: ArisErrorType
 
