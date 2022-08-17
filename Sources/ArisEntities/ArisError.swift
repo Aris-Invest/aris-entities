@@ -5,6 +5,7 @@ public enum ArisErrorType {
     case missingThirdPartyCredentials
     case decodingError(String, String)
     case missingParameter(String)
+    case internalError(String)
 }
 
 public protocol ArisErrorProtocol: Error {
@@ -24,7 +25,7 @@ public struct ArisError: ArisErrorProtocol {
         switch type {
         case .urlNotFound:
             return 404
-        case .missingThirdPartyCredentials, .decodingError:
+        case .missingThirdPartyCredentials, .decodingError, .internalError:
             return 500
         case .missingParameter:
             return 400
@@ -41,6 +42,8 @@ public struct ArisError: ArisErrorProtocol {
             return "There was an issue decoding object of type \"\(type)\", missing value for key \"\(path)\""
         case let .missingParameter(parameter):
             return "Missing parameter \"\(parameter)\" in URL"
+        case let .internalError(additionalInfo):
+            return "An unexpected error occurred: \(additionalInfo)"
         }
     }
 }
