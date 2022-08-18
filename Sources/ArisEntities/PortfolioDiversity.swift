@@ -15,13 +15,13 @@ public struct PortfolioDiversity: Codable {
         public init(
             sector: Sector,
             stocks: [String],
-            stockCount: Int,
+            sharesCount: Int,
             percentChange: Double,
             percentOfPortfolio: Double
         ) {
             self.sector = sector
             self.stocks = stocks
-            self.sharesCount = stockCount
+            self.sharesCount = sharesCount
             self.percentChange = percentChange
             self.percentOfPortfolio = percentOfPortfolio
         }
