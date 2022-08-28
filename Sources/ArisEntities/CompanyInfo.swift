@@ -6,13 +6,15 @@ public struct CompanyInfo: Codable {
         description: String?,
         listDate: String?,
         employees: Int?,
-        marketCap: Double?
+        marketCap: Double?,
+        logoUrl: URL?
     ) {
         self.name = name
         self.description = description
         self.listDate = listDate
         self.employees = employees
         self.marketCap = marketCap
+        self.logoUrl = logoUrl
     }
     
     public let name: String
@@ -20,4 +22,5 @@ public struct CompanyInfo: Codable {
     public let listDate: String?
     public let employees: Int?
     public let marketCap: Double?
+    public let logoUrl: URL?
 }
