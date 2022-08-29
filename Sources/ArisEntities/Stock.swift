@@ -8,6 +8,7 @@ public struct Stock: Codable {
     public let lastClose: Double
     public let lastOpen: Double
     public let timestamp: Date
+    public let logo: URL?
     
     public init(
         longName: String,
@@ -16,7 +17,8 @@ public struct Stock: Codable {
         company: String,
         lastClose: Double,
         lastOpen: Double,
-        timestamp: Date
+        timestamp: Date,
+        logo: URL?
     ) {
         self.longName = longName
         self.shortName = shortName
@@ -25,5 +27,6 @@ public struct Stock: Codable {
         self.lastClose = lastClose
         self.lastOpen = lastOpen
         self.timestamp = timestamp
+        self.logo = logo
     }
 }
