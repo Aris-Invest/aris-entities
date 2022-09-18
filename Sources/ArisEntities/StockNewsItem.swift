@@ -1,6 +1,6 @@
 import Foundation
 
-public struct StockNews: Codable {
+public struct StockNewsItem: Codable {
     public let title: String
     public let description: String?
     public let source: String
