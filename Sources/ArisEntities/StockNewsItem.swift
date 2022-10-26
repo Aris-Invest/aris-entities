@@ -8,6 +8,10 @@ public struct StockNewsItem: Codable {
     public let image: String?
     public let url: String?
     
+    public var date: Date? {
+        ISO8601DateFormatter().date(from: time)
+    }
+    
     public init(
         title: String,
         description: String?,
