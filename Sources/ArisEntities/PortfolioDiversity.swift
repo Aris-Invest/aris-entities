@@ -27,7 +27,7 @@ public struct PortfolioDiversity: Codable, Identifiable {
         }
     }
     
-    public let id: UUID().uuidString
+    public let id: String = UUID().uuidString
     public let status: Status
     public let breakdown: [SectorInformation]
     
