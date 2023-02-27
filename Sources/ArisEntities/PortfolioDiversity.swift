@@ -1,6 +1,6 @@
 import Foundation
 
-public struct PortfolioDiversity: Codable {
+public struct PortfolioDiversity: Codable, Identifiable {
     public enum Status: String, Codable {
         case diverse, semiDiverse, notDiverse
     }
@@ -27,6 +27,7 @@ public struct PortfolioDiversity: Codable {
         }
     }
     
+    public let id: UUID().uuidString
     public let status: Status
     public let breakdown: [SectorInformation]
     
